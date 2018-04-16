@@ -16,7 +16,7 @@ var Getfx = (base) => {
   });
 }
 
-var Convert = (base,to,ammount) => {
+var Convert = (base,to,amount) => {
     return new Promise((resolve, reject) => {axios.get(`${src}?access_key=${access_key}&base=${base}&to=${to}&amount=${amount}`)
     .then((response) =>{
         // console.log(`${src}?access_key=${access_key}`);

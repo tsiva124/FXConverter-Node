@@ -40,10 +40,13 @@ if(command === "getfx")
             console.log(Response);
         })
 }
-else if(command === "getfx") {
+else if(command === "convert") {
     fixer.Convert(yargs.base,yargs.to,yargs.amount)
         .then((Response) =>{
             console.log(`${Response.query.amount} ${Response.query.from} = ${Response.result} ${Response.query.to}`);
+        })
+        .catch((error) => {
+            console.log(error);
         })
 }
 else{
